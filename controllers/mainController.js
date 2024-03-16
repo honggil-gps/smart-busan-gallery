@@ -73,11 +73,9 @@ const updateDowns = async (req, res) => {
 const showMyPage = async (req, res) => {
   const token = req.cookies.token;
   const { userId } = jwt.verify(token, jwtSecret);
-  console.log(userId);
   const user = await User.findOne({ _id: userId })
     .populate("posts")
     .populate("comments");
-  console.log(user);
   return res.status(200).render("myPage", { user });
 };
 
@@ -131,7 +129,6 @@ const updatePost = async (req, res) => {
     const path = file.path;
     imageUrl = path.substr(6);
   }
-  console.log(imageUrl);
   await Post.findByIdAndUpdate(postId, {
     postTitle,
     postContent,
@@ -145,6 +142,7 @@ const updatePost = async (req, res) => {
 const deletePost = async (req, res) => {
   const postId = req.params.id;
   await Post.findByIdAndDelete(postId);
+  await Comment.deleteMany({ post: postId });
   res.status(201).redirect(`/main`);
 };
 
