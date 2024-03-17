@@ -18,9 +18,15 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b,
     text-align: left;
     font-size: 13px;
 }
+
+.gall_tit.ub-word a{
+    text-decoration: none;
+    color: #000;
+}
+
 .gall_list {
     width: 100%;
-    border-bottom: 1px solid #29367c;
+    border-bottom: 1px solid #f5f3f3;
 }
 body, button, input, select, table, textarea {
     font-size: 12px;
@@ -93,4 +99,14 @@ td{
     margin-top: 18px;
     text-align: center;
     line-height: 20px;
+}
+
+/* 다크 모드 스타일 */
+.dark-mode{
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-mode .gall_num, .dark-mode .gall_subject, .dark-mode .gall_tit.ub-word a, .dark-mode .gapp_date, .dark-mode .gall_count, .dark-mode .gall_recommend {
+    color: #ffffff;
 }

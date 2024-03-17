@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/footer.css">
 </head>
-<body>
+<body class="<%- typeof darkMode !== 'undefined' && darkMode ? 'dark-mode' : '' %>">
     <footer class="footer" >
         <div class="footer-container">
             <ul class="footer-list">
@@ -31,14 +31,12 @@
                     </a>
                 </li>
                 <li class="footer-list-item">
-                    <a href="../../index.html" class="link" type="button">
+                    <a href="#" class="link" type="button">
                         <span>회사소개</span>
                     </a>
                 </li>
                 <li class="footer-list-item">
-                    <a href="../../index.html" class="link" type="button">
-                        <span>다크모드</span>
-                    </a>
+                    <button id="darkModeToggle" onclick="toggleDarkMode()">다크 모드</button>
                 </li>
             </ul>
             <p class="footer-text">
@@ -47,4 +45,4 @@
         </div>
     </footer>
 </body>
-</html>
+<script src="/js/footer.js"></script>

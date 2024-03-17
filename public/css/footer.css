@@ -1,7 +1,7 @@
 footer{
     position: inherit;
     bottom: 0px;
-    width: 100;
+    width: 100%;
 }
 .footer{
     background-color: #f7f1e3;
@@ -52,6 +52,30 @@ footer{
 .footer-list-item a span{
     font-size: 15px;
 }
+
+#darkModeToggle{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* 다크 모드 스타일 */
+.dark-mode .footer {
+    background-color: #333; /* 배경색 변경 */
+    color: #fff; /* 텍스트 색상 변경 */
+}
+
+.dark-mode .footer-list-item a.link {
+    color: #fff; 
+} /* 링크 색상 변경 */
+
+.dark-mode .footer-list-item button{
+    color: #fff; 
+}
+
+.dark-mode .footer-text {
+    color: #fff;
+} /* 푸터 텍스트 색상 변경 */
+
 
 
 @media (max-width: 426px){

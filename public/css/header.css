@@ -93,3 +93,26 @@ body{
 .nav{
   background-color: #f7f1e3;
 }
+
+
+/* 다크 모드 스타일 */
+.dark-mode .header_container {
+  background-color: #333; /* 배경색 변경 */
+  color: #fff; /* 텍스트 색상 변경 */
+}
+
+.dark-mode .nav{
+  background-color: #333; 
+}
+
+.dark-mode .header_container, .dark-mode .nav, .dark-mode .menubar a {
+  color: #fff; /* 모든 텍스트를 하얀색으로 변경 */
+}
+
+.dark-mode #write_button{
+  color: #fff;
+}
+
+.dark-mode #logout, .dark-mode #my_page{
+  color: #fff;
+}
