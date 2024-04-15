@@ -42,9 +42,10 @@
             <% }) %>
         </tbody>
     </table>
+    <br>
     <h3 style="margin: 0; margin-bottom: 10px;">Comments</h3>
     <!-- <section class="main_container" style="min-height: 400px;"> -->
-      <table class="gall_list">
+    <table class="gall_list">
         <colgroup style="text-align: center;">
             <col style="width:7%">
             <col style="width: 80%; overflow: hidden; text-align: center;">
@@ -64,13 +65,12 @@
                     <a href="/main/<%=comment.post%>" style="margin-left: 15px;">
                         <%=comment.commentContent %>
                     </a>
-                  </td>
+                </td>
             </tr>
             <% }) %>
         </tbody>
     </table>
     </section>
-    <hr/>
     </main>
-</>
+<script src="/js/toggleDarkMode.js"></script>
 <%- include('./include/footer') %>
